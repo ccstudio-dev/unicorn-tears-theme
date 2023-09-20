@@ -1,0 +1,11 @@
+a {
+	color: currentColor;
+	text-decoration: none;
+	transition: .3s ease all;
+	&:hover,
+	&:active {
+		color: $accent;
+		text-decoration: underline;
+		transition: .3s ease all;
+	}
+}

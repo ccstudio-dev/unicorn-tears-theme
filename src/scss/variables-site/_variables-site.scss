@@ -1,0 +1,135 @@
+// $columns: (
+// 	1: 100%,
+// 	2: 50%,
+// 	3: 33.33%,
+// 	4: 25%,
+// 	5: 20%,
+// 	6: 16.66%,
+// 	7: 14.28%,
+// 	8: 12.5%,
+// 	9: 11.11%
+// );
+
+// $columns-margin: 50px;;
+// $spacing-unit: 50px;
+
+/* Vars */
+/* GRID */
+$grid-width: 1600px;
+$grid-gutter: 60px;
+
+/* COLORS */
+$primary: black;
+$accent: green;
+$muted: lightgreen;
+
+$black: #000000;
+$black8: rgba(0, 0, 0, .7);
+$black3: rgba(0, 0, 0, .3);
+$white: #FFF;
+$white8: rgba(255, 255, 255, .7);
+$white4: rgba(255, 255, 255, .3);
+$grey8: #353535;
+$grey3: #797979;
+$grey1: #e9e9e9;
+
+/* Basic background */
+$bg-color: #FFF;
+
+/* Special */
+$hover: chartreuse;
+$error: firebrick;
+$success: green;
+$info: skyblue;
+
+/* TYPOGRAPHY */
+/* Font stack */
+$font-stack-copy:
+"HelveticaNeue-Light",
+"Helvetica Neue Light",
+"Helvetica Neue",
+Helvetica,
+Arial,
+"Lucida Grande",
+sans-serif;
+
+$font-stack-heading:
+"HelveticaNeue-Light",
+"Helvetica Neue Light",
+"Helvetica Neue",
+Helvetica,
+Arial,
+"Lucida Grande",
+sans-serif;
+
+$font-stack-code:
+ "Andale Mono WT",
+"Andale Mono",
+"Lucida Console",
+"Lucida Sans Typewriter",
+"DejaVu Sans Mono",
+"Bitstream Vera Sans Mono",
+"Liberation Mono",
+"Nimbus Mono L",
+Monaco,
+"Courier New",
+Courier,
+monospace;
+
+
+/* Font sizes */
+$font-size-xsmall: 11px;
+$font-size-small: 12px;
+$font-size-large: 16px;
+$font-size-xlarge: 20px;
+
+/* Font weights */
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+
+/* Lineheight */
+$font-line-height: 1.4;
+/* Use For xsmall, small font sizes */
+$font-line-height-large: 1.2;
+/* Use For large, xlarge font sizes */
+
+/* Letterspacing */
+$font-letter-spacing-pos-xsmall: .005em;
+$font-letter-spacing-neg-xsmall: .01em;
+$font-letter-spacing-pos-small: 0;
+$font-letter-spacing-neg-small: .005em;
+$font-letter-spacing-pos-large: -.0025em;
+$font-letter-spacing-neg-large: .0025em;
+$font-letter-spacing-pos-xlarge: -.001em;
+$font-letter-spacing-neg-xlarge: -.001em;
+
+
+/* BORDER RADIUS */
+$border-radius-small: .1em;
+$border-radius-med: .5em;
+$border-radius-large: 1.5em;
+
+
+/* SHADOWS */
+$shadow-hud: 0 5px 17px rgba(0, 0, 0, .2), 0 2px 7px rgba(0, 0, 0, .15);
+$shadow-floating-window: 0 2px 14px rgba(0, 0, 0, .15);
+
+
+/* SPACING + SIZING */
+$size-xxxsmall: 4px;
+$size-xxsmall: 8px;
+$size-xsmall: 15px;
+$size-small: 20px;
+$size-medium: 30px;
+$size-large: 40px;
+$size-xlarge: 50px;
+$size-xxlarge: 80px;
+$size-xxxlarge: 100px;
+
+/* TYPOGRAPHY */
+$font-size-copy: clamp(1.4rem, 2vw, 2rem);
+$font-size-xs: clamp(1.4rem, 1.5vw, 2rem);
+$font-size-s: clamp(1.8rem, 1.5vw, 3rem);
+$font-size-m: clamp(2.2rem, 2vw, 5rem);
+$font-size-l: clamp(3rem, 5vw, 7rem);

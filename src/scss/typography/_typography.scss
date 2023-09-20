@@ -1,0 +1,15 @@
+body,
+button,
+input,
+select,
+textarea {
+	color: $primary;
+	font-family: $font-stack-copy;
+	font-size: $font-size-copy;
+	letter-spacing: .01em;
+	line-height: 1.4;
+}
+
+@import "headings";
+
+@import "copy";

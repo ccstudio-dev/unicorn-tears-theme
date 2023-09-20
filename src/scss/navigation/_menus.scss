@@ -1,0 +1,263 @@
+.main-navigation {
+    svg {
+        stroke: currentColor;
+        transition: .3s ease all;
+    }
+
+	ul {
+		list-style: none;
+		margin: 0;
+        padding: 0;
+        display: flex;
+
+        @include media("<=menu") {
+            display: block;
+        }
+
+
+		ul {
+			// box-shadow: 0 3px 10px rgba($grey8, 0.3);
+			// float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+            // background-color: #FFF;
+            padding-left: 10px;
+            min-width: 200px;
+
+            @include media("<=menu") {
+                position: relative;
+                float: none;
+                left: auto;
+                top: auto;
+            }
+
+			ul {
+				left: -999em;
+				top: 0;
+
+                @include media("<=menu") {
+                    left: initial;
+                }
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+
+                    @include media("<=menu") {
+                        left: initial;
+                    }
+				}
+			}
+
+			a {
+//				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+        li.focus > ul,
+        li.toggled-on > ul {
+            // left: auto;
+            left: -20px;
+            display: block;
+		}
+
+        li:hover > ul {
+            @include media("<=menu") {
+                display: none;
+                left: 0;
+            }
+        }
+	}
+
+	li {
+		position: relative;
+        text-align: left;
+        display: inline-flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 1em;
+
+        @include media("<=menu") {
+            display: block;
+        }
+		&:hover > a,
+		&.focus > a {
+            background-color: $accent;
+            color: $primary;
+		}
+	}
+
+
+	a {
+		display: inline-block;
+        vertical-align: middle;
+		text-decoration: none;
+        // padding: 15px;
+        border: none;
+        // width: 100%;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+        border-bottom: 2px solid currentColor;
+	}
+
+    .sub-menu {
+        width: 200px;
+        margin: 0;
+        padding: 0;
+        background-color: $white;
+
+        // display: none;
+        @include media("<=menu") {
+            width: 100%;
+            padding: 0;
+            margin: .3em 0;
+            display: none;
+        }
+
+        li {
+            width: 100%;
+            margin: 0;
+            padding: .5em 1em;
+
+            @include media("<=menu") {
+                padding: .5em 0;
+            }
+        }
+
+    }
+    .toggled-on,
+    .focus {
+        .sub-menu {
+            display: block;
+        }
+        .dropdown-toggle {
+            transform: rotate(180deg);
+        }
+    }
+    .dropdown-toggle {
+        margin: 0 .3em;
+        padding: 1em;
+        background-color: transparent;
+        display: inline-flex;
+        color: currentColor;
+        svg {
+            fill: none;
+            stroke: currentColor;
+        }
+    }
+}
+
+.ancestor-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    a {
+        display: block;
+        flex: 1;
+    }
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ancestor-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+#menu-social {
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    li {
+        margin: 0 20px;
+
+        svg {
+            fill: currentColor;
+            opacity: 1;
+            transition: .3s ease all;
+        }
+        &:hover {
+            svg {
+                opacity: .7;
+                transition: .3s ease all;
+            }
+        }
+    }
+}
+
+//Mobile menu global styles
+// ==================================================
+//media query to hide/show the mobile menu
+@include media(">menu") {
+    #mobile-menu {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+    }
+}
+
+@include media("<=menu") {
+    .menu-open {
+        // position: fixed;
+        // height: 100vh;
+        overflow: hidden;
+    }
+}
+
+button#mobile-menu {
+	position: relative;
+	z-index: 101;
+    margin: auto;
+
+    @include media("<=menu") {
+        display: table;
+    }
+
+}
+
+// ======================================================================================
+
+// Mobile menu types (Remove or comment out what you don’t need)
+// TO USE:
+// 1. Add the name as a class to the menu wrapper in header.php
+//    eg. <div class="menu-wrapper slideup">
+// 2. Make sure the corresponding sass file is being imported
+// 3. Change styles
+// Sidenote: Everything inside the menu wrapper will be contained within the mobile menu
+
+// ======================================================================================
+
+@import "menus/overlay";
+//@import "menus/slidedown";
+// @import "menus/slideleft";
+//@import "menus/slideright";
+//@import "menus/dropdown";
+//@import "menus/pushleft";
+//@import "menus/pushright";
+//@import "menus/pushtop";
